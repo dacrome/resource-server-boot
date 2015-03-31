@@ -21,12 +21,12 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.controller
+package org.osiam.resource_server.resources.controller
 
-import org.osiam.resources.helper.AttributesRemovalHelper
-import org.osiam.resources.helper.JsonInputValidator
-import org.osiam.resources.helper.RequestParamHelper
-import org.osiam.resources.provisioning.SCIMGroupProvisioning
+import org.osiam.resource_server.resources.helper.AttributesRemovalHelper
+import org.osiam.resource_server.resources.helper.JsonInputValidator
+import org.osiam.resource_server.resources.helper.RequestParamHelper
+import org.osiam.resource_server.resources.provisioning.SCIMGroupProvisioning
 import org.osiam.resources.scim.Group
 import org.osiam.resources.scim.SCIMSearchResult
 import org.springframework.http.HttpStatus

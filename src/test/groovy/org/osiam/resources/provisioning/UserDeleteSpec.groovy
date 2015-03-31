@@ -21,12 +21,12 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.provisioning
+package org.osiam.resource_server.resources.provisioning
 
 import javax.persistence.NoResultException
 
-import org.osiam.resources.exceptions.ResourceNotFoundException
-import org.osiam.storage.dao.UserDao
+import org.osiam.resource_server.resources.exceptions.ResourceNotFoundException
+import org.osiam.resource_server.storage.dao.UserDao
 
 import spock.lang.Specification
 

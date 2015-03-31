@@ -21,7 +21,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.helper
+package org.osiam.resource_server.resources.helper
 
 import java.util.logging.Logger
 
@@ -72,7 +72,7 @@ class MeasureDurationTimeOfMethodsSpec extends Specification {
         annotation.value() == "within(org.osiam..*)"
     }
 
-    def "should exclude org.osiam.security.authorization.DynamicHTTPMethodScopeEnhancer due to an error"() {
+    def "should exclude org.osiam.resource_server.security.authorization.DynamicHTTPMethodScopeEnhancer due to an error"() {
         given:
         def method = underTest.class.getMethod("excludeDynamicHTTPMethodScopeEnhancer")
 
@@ -80,6 +80,6 @@ class MeasureDurationTimeOfMethodsSpec extends Specification {
         def annotation = method.getAnnotation(Pointcut)
         underTest.excludeDynamicHTTPMethodScopeEnhancer()
         then:
-        annotation.value() == "!execution(* org.osiam.security.authorization.DynamicHTTPMethodScopeEnhancer.*(..))"
+        annotation.value() == "!execution(* org.osiam.resource_server.security.authorization.DynamicHTTPMethodScopeEnhancer.*(..))"
     }
 }

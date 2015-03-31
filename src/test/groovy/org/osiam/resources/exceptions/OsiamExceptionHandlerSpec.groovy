@@ -21,14 +21,14 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.exceptions
+package org.osiam.resource_server.resources.exceptions
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.osiam.resources.scim.User
-import org.osiam.storage.entities.EmailEntity
-import org.osiam.storage.entities.ImEntity
-import org.osiam.storage.entities.PhoneNumberEntity
-import org.osiam.storage.entities.PhotoEntity
+import org.osiam.resource_server.storage.entities.EmailEntity
+import org.osiam.resource_server.storage.entities.ImEntity
+import org.osiam.resource_server.storage.entities.PhoneNumberEntity
+import org.osiam.resource_server.storage.entities.PhotoEntity
 import org.springframework.http.HttpStatus
 import org.springframework.web.context.request.WebRequest
 import spock.lang.Shared
@@ -73,7 +73,7 @@ class OsiamExceptionHandlerSpec extends Specification {
         (result.getBody() as OsiamExceptionHandler.JsonErrorResult).error_code == HttpStatus.NOT_IMPLEMENTED.name()
     }
 
-    def "status is set to I_AM_A_TEAPOT when org.osiam.resources.exceptions.SchemaUnknownException occurs"() {
+    def "status is set to I_AM_A_TEAPOT when org.osiam.resource_server.resources.exceptions.SchemaUnknownException occurs"() {
         when:
         def result = exceptionHandler.handleConflict(new SchemaUnknownException(), request)
         then:

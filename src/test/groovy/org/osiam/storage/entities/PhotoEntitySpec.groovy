@@ -21,12 +21,12 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.storage.entities
+package org.osiam.resource_server.storage.entities
 
-import org.osiam.resources.exceptions.OsiamException
+import org.osiam.resource_server.resources.exceptions.OsiamException
 import org.osiam.resources.scim.MultiValuedAttribute
-import org.osiam.storage.entities.PhotoEntity
-import org.osiam.storage.entities.UserEntity
+import org.osiam.resource_server.storage.entities.PhotoEntity
+import org.osiam.resource_server.storage.entities.UserEntity
 
 import spock.lang.Specification
 

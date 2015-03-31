@@ -21,10 +21,10 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.converter
+package org.osiam.resource_server.resources.converter
 
 import org.osiam.resources.scim.Photo
-import org.osiam.storage.entities.PhotoEntity
+import org.osiam.resource_server.storage.entities.PhotoEntity
 
 import spock.lang.Specification
 

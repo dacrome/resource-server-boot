@@ -21,7 +21,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.exceptions
+package org.osiam.resource_server.resources.exceptions
 
 import spock.lang.Specification
 

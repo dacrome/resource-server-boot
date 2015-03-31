@@ -21,16 +21,16 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.converter
+package org.osiam.resource_server.resources.converter
 
 import org.joda.time.format.ISODateTimeFormat
 import org.osiam.resources.scim.Extension
 import org.osiam.resources.scim.ExtensionFieldType
-import org.osiam.storage.dao.ExtensionDao
-import org.osiam.storage.entities.ExtensionEntity
-import org.osiam.storage.entities.ExtensionFieldEntity
-import org.osiam.storage.entities.ExtensionFieldValueEntity
-import org.osiam.storage.helper.NumberPadder
+import org.osiam.resource_server.storage.dao.ExtensionDao
+import org.osiam.resource_server.storage.entities.ExtensionEntity
+import org.osiam.resource_server.storage.entities.ExtensionFieldEntity
+import org.osiam.resource_server.storage.entities.ExtensionFieldValueEntity
+import org.osiam.resource_server.storage.helper.NumberPadder
 
 import spock.lang.Specification
 

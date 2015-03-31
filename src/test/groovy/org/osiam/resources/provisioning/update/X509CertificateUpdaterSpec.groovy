@@ -21,13 +21,13 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.provisioning.update
+package org.osiam.resource_server.resources.provisioning.update
 
-import org.osiam.resources.converter.X509CertificateConverter
+import org.osiam.resource_server.resources.converter.X509CertificateConverter
 import org.osiam.resources.scim.MultiValuedAttribute
 import org.osiam.resources.scim.X509Certificate
-import org.osiam.storage.entities.UserEntity
-import org.osiam.storage.entities.X509CertificateEntity
+import org.osiam.resource_server.storage.entities.UserEntity
+import org.osiam.resource_server.storage.entities.X509CertificateEntity
 
 import spock.lang.Specification
 

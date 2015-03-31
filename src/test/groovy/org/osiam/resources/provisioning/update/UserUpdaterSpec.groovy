@@ -21,17 +21,17 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.provisioning.update
+package org.osiam.resource_server.resources.provisioning.update
 
-import org.osiam.resources.exceptions.OsiamException
-import org.osiam.resources.exceptions.ResourceExistsException
+import org.osiam.resource_server.resources.exceptions.OsiamException
+import org.osiam.resource_server.resources.exceptions.ResourceExistsException
 import org.osiam.resources.scim.Group
 import org.osiam.resources.scim.Meta
 import org.osiam.resources.scim.User
-import org.osiam.storage.dao.ExtensionDao
-import org.osiam.storage.dao.UserDao
-import org.osiam.storage.entities.UserEntity
-import org.osiam.storage.helper.NumberPadder
+import org.osiam.resource_server.storage.dao.ExtensionDao
+import org.osiam.resource_server.storage.dao.UserDao
+import org.osiam.resource_server.storage.entities.UserEntity
+import org.osiam.resource_server.storage.helper.NumberPadder
 import org.springframework.security.authentication.encoding.PasswordEncoder
 
 import spock.lang.Specification

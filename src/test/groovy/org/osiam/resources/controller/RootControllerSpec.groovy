@@ -21,7 +21,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.controller
+package org.osiam.resource_server.resources.controller
 
 import java.lang.reflect.Method
 

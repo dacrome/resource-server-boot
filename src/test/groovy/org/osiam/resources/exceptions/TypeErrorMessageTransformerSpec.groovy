@@ -21,18 +21,18 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.exceptions
+package org.osiam.resource_server.resources.exceptions
 
 import spock.lang.Specification
 
 class TypeErrorMessageTransformerSpec extends Specification {
     def underTest = new TypeErrorMessageTransformer()
 
-    def "should not transform message No enum constant org.osiam.storage.hahaha.CanonicalPhotoTypes.huch"() {
+    def "should not transform message No enum constant org.osiam.resource_server.storage.hahaha.CanonicalPhotoTypes.huch"() {
         when:
-        def result = underTest.transform("No enum constant org.osiam.storage.hahaha.CanonicalPhotoTypes.huch")
+        def result = underTest.transform("No enum constant org.osiam.resource_server.storage.hahaha.CanonicalPhotoTypes.huch")
         then:
-        result == "No enum constant org.osiam.storage.hahaha.CanonicalPhotoTypes.huch"
+        result == "No enum constant org.osiam.resource_server.storage.hahaha.CanonicalPhotoTypes.huch"
     }
 
     def "should ignore null"() {

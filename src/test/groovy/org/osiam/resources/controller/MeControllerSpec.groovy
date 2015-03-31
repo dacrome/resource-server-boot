@@ -21,20 +21,20 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.controller
+package org.osiam.resource_server.resources.controller
 
 import javax.servlet.http.HttpServletRequest
 
 import org.joda.time.format.DateTimeFormatter
 import org.joda.time.format.ISODateTimeFormat
 import org.osiam.resources.scim.User;
-import org.osiam.security.authorization.AccessTokenValidationService
-import org.osiam.security.helper.AccessTokenHelper;
-import org.osiam.storage.dao.UserDao
-import org.osiam.storage.entities.EmailEntity
-import org.osiam.storage.entities.MetaEntity
-import org.osiam.storage.entities.NameEntity
-import org.osiam.storage.entities.UserEntity
+import org.osiam.resource_server.security.authorization.AccessTokenValidationService
+import org.osiam.resource_server.security.helper.AccessTokenHelper;
+import org.osiam.resource_server.storage.dao.UserDao
+import org.osiam.resource_server.storage.entities.EmailEntity
+import org.osiam.resource_server.storage.entities.MetaEntity
+import org.osiam.resource_server.storage.entities.NameEntity
+import org.osiam.resource_server.storage.entities.UserEntity
 import org.springframework.security.core.Authentication
 import org.springframework.security.oauth2.provider.OAuth2Authentication
 

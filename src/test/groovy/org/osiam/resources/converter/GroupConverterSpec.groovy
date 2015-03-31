@@ -21,16 +21,16 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.converter
+package org.osiam.resource_server.resources.converter
 
-import org.osiam.resources.exceptions.ResourceNotFoundException
+import org.osiam.resource_server.resources.exceptions.ResourceNotFoundException
 import org.osiam.resources.scim.Group
 import org.osiam.resources.scim.MemberRef
-import org.osiam.storage.dao.ResourceDao
-import org.osiam.storage.entities.GroupEntity
-import org.osiam.storage.entities.MetaEntity
-import org.osiam.storage.entities.ResourceEntity
-import org.osiam.storage.entities.UserEntity
+import org.osiam.resource_server.storage.dao.ResourceDao
+import org.osiam.resource_server.storage.entities.GroupEntity
+import org.osiam.resource_server.storage.entities.MetaEntity
+import org.osiam.resource_server.storage.entities.ResourceEntity
+import org.osiam.resource_server.storage.entities.UserEntity
 
 import spock.lang.Specification
 

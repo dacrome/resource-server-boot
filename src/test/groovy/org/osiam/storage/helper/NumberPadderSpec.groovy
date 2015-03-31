@@ -21,7 +21,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.storage.helper
+package org.osiam.resource_server.storage.helper
 
 import spock.lang.Specification
 import spock.lang.Unroll

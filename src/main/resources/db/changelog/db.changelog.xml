@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <changeSet author="vagrant (generated)" id="1428273940131-1" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="PERSON">
+            <column autoIncrement="true" name="ID" type="INT(10)">
+                <constraints primaryKey="true" primaryKeyName="PK_PERSON"/>
+            </column>
+            <column name="FIRST_NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LAST_NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-2" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="SCIM_ADDRESS">
+            <column autoIncrement="true" name="MULTI_VALUE_ID" type="BIGINT(19)">
+                <constraints primaryKey="true" primaryKeyName="CONSTRAINT_2"/>
+            </column>
+            <column name="IS_PRIMARY" type="BOOLEAN(1)"/>
+            <column name="COUNTRY" type="VARCHAR(255)"/>
+            <column name="FORMATTED" type="CLOB"/>
+            <column name="LOCALITY" type="VARCHAR(255)"/>
+            <column name="POSTAL_CODE" type="VARCHAR(255)"/>
+            <column name="REGION" type="VARCHAR(255)"/>
+            <column name="STREET_ADDRESS" type="VARCHAR(255)"/>
+            <column name="TYPE" type="VARCHAR(255)"/>
+            <column name="USER_INTERNAL_ID" type="BIGINT(19)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-3" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="SCIM_CERTIFICATE">
+            <column autoIncrement="true" name="MULTI_VALUE_ID" type="BIGINT(19)">
+                <constraints primaryKey="true" primaryKeyName="CONSTRAINT_9"/>
+            </column>
+            <column name="IS_PRIMARY" type="BOOLEAN(1)"/>
+            <column name="VALUE" type="CLOB"/>
+            <column name="TYPE" type="VARCHAR(255)"/>
+            <column name="USER_INTERNAL_ID" type="BIGINT(19)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-4" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="SCIM_EMAIL">
+            <column autoIncrement="true" name="MULTI_VALUE_ID" type="BIGINT(19)">
+                <constraints primaryKey="true" primaryKeyName="CONSTRAINT_3"/>
+            </column>
+            <column name="IS_PRIMARY" type="BOOLEAN(1)"/>
+            <column name="VALUE" type="CLOB"/>
+            <column name="TYPE" type="VARCHAR(255)"/>
+            <column name="USER_INTERNAL_ID" type="BIGINT(19)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-5" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="SCIM_ENTITLEMENTS">
+            <column autoIncrement="true" name="MULTI_VALUE_ID" type="BIGINT(19)">
+                <constraints primaryKey="true" primaryKeyName="CONSTRAINT_6"/>
+            </column>
+            <column name="IS_PRIMARY" type="BOOLEAN(1)"/>
+            <column name="VALUE" type="CLOB"/>
+            <column name="TYPE" type="VARCHAR(255)"/>
+            <column name="USER_INTERNAL_ID" type="BIGINT(19)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-6" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="SCIM_EXTENSION">
+            <column autoIncrement="true" name="INTERNAL_ID" type="BIGINT(19)">
+                <constraints primaryKey="true" primaryKeyName="CONSTRAINT_C"/>
+            </column>
+            <column name="URN" type="CLOB">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-7" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="SCIM_EXTENSION_FIELD">
+            <column autoIncrement="true" name="INTERNAL_ID" type="BIGINT(19)">
+                <constraints primaryKey="true" primaryKeyName="CONSTRAINT_D"/>
+            </column>
+            <column name="NAME" type="VARCHAR(255)"/>
+            <column name="IS_REQUIRED" type="BOOLEAN(1)"/>
+            <column name="TYPE" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="EXTENSION_INTERNAL_ID" type="BIGINT(19)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-8" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="SCIM_EXTENSION_FIELD_VALUE">
+            <column autoIncrement="true" name="INTERNAL_ID" type="BIGINT(19)">
+                <constraints primaryKey="true" primaryKeyName="CONSTRAINT_37"/>
+            </column>
+            <column name="VALUE" type="CLOB">
+                <constraints nullable="false"/>
+            </column>
+            <column name="EXTENSION_FIELD_INTERNAL_ID" type="BIGINT(19)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="USER_INTERNAL_ID" type="BIGINT(19)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-9" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="SCIM_GROUP">
+            <column name="DISPLAY_NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INTERNAL_ID" type="BIGINT(19)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-10" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="SCIM_GROUP_SCIM_ID">
+            <column name="GROUPS_INTERNAL_ID" type="BIGINT(19)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MEMBERS_INTERNAL_ID" type="BIGINT(19)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-11" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="SCIM_ID">
+            <column autoIncrement="true" name="INTERNAL_ID" type="BIGINT(19)">
+                <constraints primaryKey="true" primaryKeyName="CONSTRAINT_9D"/>
+            </column>
+            <column name="EXTERNAL_ID" type="VARCHAR(255)"/>
+            <column name="ID" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="META_ID" type="BIGINT(19)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-12" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="SCIM_IM">
+            <column autoIncrement="true" name="MULTI_VALUE_ID" type="BIGINT(19)">
+                <constraints primaryKey="true" primaryKeyName="CONSTRAINT_9D2"/>
+            </column>
+            <column name="IS_PRIMARY" type="BOOLEAN(1)"/>
+            <column name="VALUE" type="CLOB"/>
+            <column name="TYPE" type="VARCHAR(255)"/>
+            <column name="USER_INTERNAL_ID" type="BIGINT(19)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-13" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="SCIM_META">
+            <column autoIncrement="true" name="ID" type="BIGINT(19)">
+                <constraints primaryKey="true" primaryKeyName="CONSTRAINT_E"/>
+            </column>
+            <column name="CREATED" type="TIMESTAMP"/>
+            <column name="LAST_MODIFIED" type="TIMESTAMP"/>
+            <column name="LOCATION" type="CLOB"/>
+            <column name="RESOURCE_TYPE" type="VARCHAR(255)"/>
+            <column name="VERSION" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-14" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="SCIM_NAME">
+            <column autoIncrement="true" name="ID" type="BIGINT(19)">
+                <constraints primaryKey="true" primaryKeyName="CONSTRAINT_E0"/>
+            </column>
+            <column name="FAMILY_NAME" type="VARCHAR(255)"/>
+            <column name="FORMATTED" type="CLOB"/>
+            <column name="GIVEN_NAME" type="VARCHAR(255)"/>
+            <column name="HONORIFIC_PREFIX" type="VARCHAR(255)"/>
+            <column name="HONORIFIC_SUFFIX" type="VARCHAR(255)"/>
+            <column name="MIDDLE_NAME" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-15" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="SCIM_PHONENUMBER">
+            <column autoIncrement="true" name="MULTI_VALUE_ID" type="BIGINT(19)">
+                <constraints primaryKey="true" primaryKeyName="CONSTRAINT_1"/>
+            </column>
+            <column name="IS_PRIMARY" type="BOOLEAN(1)"/>
+            <column name="VALUE" type="CLOB"/>
+            <column name="TYPE" type="VARCHAR(255)"/>
+            <column name="USER_INTERNAL_ID" type="BIGINT(19)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-16" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="SCIM_PHOTO">
+            <column autoIncrement="true" name="MULTI_VALUE_ID" type="BIGINT(19)">
+                <constraints primaryKey="true" primaryKeyName="CONSTRAINT_30D"/>
+            </column>
+            <column name="IS_PRIMARY" type="BOOLEAN(1)"/>
+            <column name="VALUE" type="CLOB"/>
+            <column name="TYPE" type="VARCHAR(255)"/>
+            <column name="USER_INTERNAL_ID" type="BIGINT(19)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-17" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="SCIM_ROLES">
+            <column autoIncrement="true" name="MULTI_VALUE_ID" type="BIGINT(19)">
+                <constraints primaryKey="true" primaryKeyName="CONSTRAINT_30F"/>
+            </column>
+            <column name="IS_PRIMARY" type="BOOLEAN(1)"/>
+            <column name="VALUE" type="CLOB"/>
+            <column name="TYPE" type="VARCHAR(255)"/>
+            <column name="USER_INTERNAL_ID" type="BIGINT(19)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-18" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="SCIM_USER">
+            <column name="INTERNAL_ID" type="BIGINT(19)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-19" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addColumn tableName="SCIM_USER">
+            <column name="NAME_ID" type="BIGINT(19)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-20" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addColumn tableName="SCIM_USER">
+            <column name="USER_NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-21" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="GROUPS_INTERNAL_ID, MEMBERS_INTERNAL_ID" constraintName="CONSTRAINT_2D" tableName="SCIM_GROUP_SCIM_ID"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-22" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="INTERNAL_ID" constraintName="CONSTRAINT_30" tableName="SCIM_GROUP"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-23" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="INTERNAL_ID" constraintName="CONSTRAINT_E08" tableName="SCIM_USER"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-24" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addUniqueConstraint columnNames="DISPLAY_NAME" constraintName="UK_1S4SWWMX1UDFPMB2PKI9KCN3" deferrable="false" disabled="false" initiallyDeferred="false" tableName="SCIM_GROUP"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-25" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addUniqueConstraint columnNames="" constraintName="UK_9RVM7W04Q503Y4GX9Q0C55CNV" deferrable="false" disabled="false" initiallyDeferred="false" tableName="SCIM_EXTENSION_FIELD"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-26" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addUniqueConstraint columnNames="USER_NAME" constraintName="UK_O2E5CAAK3GW9ROIL6NBGVEW5O" deferrable="false" disabled="false" initiallyDeferred="false" tableName="SCIM_USER"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-27" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addUniqueConstraint columnNames="ID" constraintName="UK_Q4YA5M8V6TAFGTVW1INQTMM42" deferrable="false" disabled="false" initiallyDeferred="false" tableName="SCIM_ID"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-28" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addUniqueConstraint columnNames="EXTERNAL_ID" constraintName="UK_QN7VP62PGEHNMGKI8DA06AO9I" deferrable="false" disabled="false" initiallyDeferred="false" tableName="SCIM_ID"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-29" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="EXTENSION_FIELD_INTERNAL_ID" baseTableName="SCIM_EXTENSION_FIELD_VALUE" constraintName="FK_6Y0V7G2Y69NKVODY9JV5Q3TUO" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="INTERNAL_ID" referencedTableName="SCIM_EXTENSION_FIELD"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-30" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="USER_INTERNAL_ID" baseTableName="SCIM_ENTITLEMENTS" constraintName="FK_7JNL5VQCFG1J9PLJ4PY1QVXCP" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="INTERNAL_ID" referencedTableName="SCIM_USER"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-31" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="USER_INTERNAL_ID" baseTableName="SCIM_PHONENUMBER" constraintName="FK_8Q8P62XCREF5GIVACVQ37N8LQ" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="INTERNAL_ID" referencedTableName="SCIM_USER"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-32" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="MEMBERS_INTERNAL_ID" baseTableName="SCIM_GROUP_SCIM_ID" constraintName="FK_B29Y2QC2J5UU49WA9GRPBULB0" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="INTERNAL_ID" referencedTableName="SCIM_ID"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-33" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="META_ID" baseTableName="SCIM_ID" constraintName="FK_BYXTTQFBMB2WCJ4UD3HD53MW3" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="ID" referencedTableName="SCIM_META"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-34" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="NAME_ID" baseTableName="SCIM_USER" constraintName="FK_D2JI7IPE62FBG8UU2IR7B9LS4" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="ID" referencedTableName="SCIM_NAME"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-35" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="USER_INTERNAL_ID" baseTableName="SCIM_EMAIL" constraintName="FK_DMFJ3S46NPN4P1PCRC3IUR2MP" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="INTERNAL_ID" referencedTableName="SCIM_USER"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-36" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="EXTENSION_INTERNAL_ID" baseTableName="SCIM_EXTENSION_FIELD" constraintName="FK_EKSEK96TMTXKAQE5A7HFMOSWO" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="INTERNAL_ID" referencedTableName="SCIM_EXTENSION"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-37" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="GROUPS_INTERNAL_ID" baseTableName="SCIM_GROUP_SCIM_ID" constraintName="FK_GCT22972JRRV22CRORIXFDLMI" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="INTERNAL_ID" referencedTableName="SCIM_GROUP"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-38" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="USER_INTERNAL_ID" baseTableName="SCIM_CERTIFICATE" constraintName="FK_GHDPGMH1B8SUIMTFXDL8653BJ" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="INTERNAL_ID" referencedTableName="SCIM_USER"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-39" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="USER_INTERNAL_ID" baseTableName="SCIM_IM" constraintName="FK_HMSAH9DINHK7F8K4LF50H658" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="INTERNAL_ID" referencedTableName="SCIM_USER"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-40" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="USER_INTERNAL_ID" baseTableName="SCIM_EXTENSION_FIELD_VALUE" constraintName="FK_IN6GS4SAFPKNTVAC3V88KE54R" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="INTERNAL_ID" referencedTableName="SCIM_USER"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-41" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="USER_INTERNAL_ID" baseTableName="SCIM_ROLES" constraintName="FK_N5UND6LNRTBLHGS2OCOCPGLYI" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="INTERNAL_ID" referencedTableName="SCIM_USER"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-42" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="INTERNAL_ID" baseTableName="SCIM_USER" constraintName="FK_NX0839HYQD5YRFELXKR2FPR7A" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="INTERNAL_ID" referencedTableName="SCIM_ID"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-43" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="INTERNAL_ID" baseTableName="SCIM_GROUP" constraintName="FK_OARI88X9O5J9JMIGTT5S20M4K" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="INTERNAL_ID" referencedTableName="SCIM_ID"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-44" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="USER_INTERNAL_ID" baseTableName="SCIM_PHOTO" constraintName="FK_Q3RK61YLA08PVOD7GQ8AV7I0L" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="INTERNAL_ID" referencedTableName="SCIM_USER"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-45" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="USER_INTERNAL_ID" baseTableName="SCIM_ADDRESS" constraintName="FK_QR6GTQI0H9R6YP034TARLRY1K" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="INTERNAL_ID" referencedTableName="SCIM_USER"/>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-46" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createIndex indexName="UK_1ER38KW2ITH4EWUF7B5RHH7BR" tableName="SCIM_PHOTO" unique="false">
+            <column name="TYPE"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-47" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createIndex indexName="UK_1O8KEVC2E2HFK24F19J3VCIA4" tableName="SCIM_META" unique="false">
+            <column name="CREATED"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-48" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createIndex indexName="UK_3OWU6IBJVA850UT4E64P00XI5" tableName="SCIM_META" unique="false">
+            <column name="LAST_MODIFIED"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-49" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createIndex indexName="UK_4JV7NLHVKA8R583HODB6Q7WNR" tableName="SCIM_ADDRESS" unique="false">
+            <column name="COUNTRY"/>
+            <column name="REGION"/>
+            <column name="LOCALITY"/>
+            <column name="POSTAL_CODE"/>
+            <column name="STREET_ADDRESS"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-50" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createIndex indexName="UK_75WO1PHHOVP2NBRUH2DMFHCWK" tableName="SCIM_ENTITLEMENTS" unique="false">
+            <column name="TYPE"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-51" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createIndex indexName="UK_7K7TC0DU5JUCY4RANQN8UID4B" tableName="SCIM_CERTIFICATE" unique="false">
+            <column name="TYPE"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-52" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createIndex indexName="UK_88YYJ57G5NISGP2TRHS2YQA91" tableName="SCIM_IM" unique="false">
+            <column name="TYPE"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-53" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createIndex indexName="UK_8QWT29EWJM8URPI7VK10Q2FB3" tableName="SCIM_ROLES" unique="false">
+            <column name="TYPE"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-54" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createIndex indexName="UK_9RVM7W04Q503Y4GX9Q0C55CNV_INDEX_D" tableName="SCIM_EXTENSION_FIELD" unique="true">
+            <column name="EXTENSION_INTERNAL_ID"/>
+            <column name="NAME"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-55" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createIndex indexName="UK_9WNLEIK7N5UUKSIT3LS1MSOW8" tableName="SCIM_PHONENUMBER" unique="false">
+            <column name="TYPE"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-56" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createIndex indexName="UK_HVPIETO01A5C7B5EDR1V9POM4" tableName="SCIM_EMAIL" unique="false">
+            <column name="TYPE"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-57" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createIndex indexName="UK_IE5406DJ1T9I0F9HYTGVBXJL2" tableName="SCIM_ADDRESS" unique="false">
+            <column name="TYPE"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vagrant (generated)" id="1428273940131-58" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createIndex indexName="UK_P2Y10QXTUQDVBL5SPXU98AKX2" tableName="SCIM_EXTENSION_FIELD_VALUE" unique="false">
+            <column name="USER_INTERNAL_ID"/>
+            <column name="EXTENSION_FIELD_INTERNAL_ID"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>

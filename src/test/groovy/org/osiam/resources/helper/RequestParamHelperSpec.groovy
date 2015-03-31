@@ -21,11 +21,11 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.helper
+package org.osiam.resource_server.resources.helper
 
 import javax.servlet.http.HttpServletRequest
 
-import org.osiam.storage.dao.ResourceDao
+import org.osiam.resource_server.storage.dao.ResourceDao
 
 import spock.lang.Ignore
 import spock.lang.Specification

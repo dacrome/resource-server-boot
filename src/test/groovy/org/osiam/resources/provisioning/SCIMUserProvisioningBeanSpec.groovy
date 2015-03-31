@@ -21,18 +21,18 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.provisioning
+package org.osiam.resource_server.resources.provisioning
 
 import org.antlr.v4.runtime.tree.ParseTree
 import org.hibernate.hql.spi.FilterTranslator
-import org.osiam.resources.converter.UserConverter
-import org.osiam.resources.exceptions.ResourceExistsException
+import org.osiam.resource_server.resources.converter.UserConverter
+import org.osiam.resource_server.resources.exceptions.ResourceExistsException
 import org.osiam.resources.scim.User
-import org.osiam.storage.dao.SearchResult
-import org.osiam.storage.dao.UserDao
-import org.osiam.storage.entities.MetaEntity
-import org.osiam.storage.entities.UserEntity
-import org.osiam.storage.query.QueryFilterParser
+import org.osiam.resource_server.storage.dao.SearchResult
+import org.osiam.resource_server.storage.dao.UserDao
+import org.osiam.resource_server.storage.entities.MetaEntity
+import org.osiam.resource_server.storage.entities.UserEntity
+import org.osiam.resource_server.storage.query.QueryFilterParser
 import org.springframework.security.authentication.encoding.PasswordEncoder
 
 import spock.lang.Specification

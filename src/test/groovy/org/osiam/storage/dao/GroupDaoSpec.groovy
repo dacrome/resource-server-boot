@@ -21,9 +21,9 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.storage.dao
+package org.osiam.resource_server.storage.dao
 
-import org.osiam.storage.entities.GroupEntity
+import org.osiam.resource_server.storage.entities.GroupEntity
 
 import spock.lang.Specification
 

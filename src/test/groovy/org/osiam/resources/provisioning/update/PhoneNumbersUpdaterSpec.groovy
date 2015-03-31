@@ -21,13 +21,13 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.provisioning.update
+package org.osiam.resource_server.resources.provisioning.update
 
-import org.osiam.resources.converter.PhoneNumberConverter
+import org.osiam.resource_server.resources.converter.PhoneNumberConverter
 import org.osiam.resources.scim.MultiValuedAttribute
 import org.osiam.resources.scim.PhoneNumber
-import org.osiam.storage.entities.PhoneNumberEntity
-import org.osiam.storage.entities.UserEntity
+import org.osiam.resource_server.storage.entities.PhoneNumberEntity
+import org.osiam.resource_server.storage.entities.UserEntity
 
 import spock.lang.Specification
 

@@ -21,14 +21,14 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.controller
+package org.osiam.resource_server.resources.controller
 
 import javax.servlet.http.HttpServletRequest
 
 import org.joda.time.DateTime
 import org.joda.time.format.ISODateTimeFormat
-import org.osiam.resources.helper.RequestParamHelper
-import org.osiam.resources.provisioning.SCIMUserProvisioning
+import org.osiam.resource_server.resources.helper.RequestParamHelper
+import org.osiam.resource_server.resources.provisioning.SCIMUserProvisioning
 import org.osiam.resources.scim.Meta
 import org.osiam.resources.scim.SCIMSearchResult
 import org.osiam.resources.scim.User

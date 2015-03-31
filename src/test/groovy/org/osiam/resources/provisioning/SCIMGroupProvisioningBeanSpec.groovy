@@ -21,23 +21,23 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.provisioning
+package org.osiam.resource_server.resources.provisioning
 
 import javax.persistence.NoResultException
 
 import org.antlr.v4.runtime.tree.ParseTree
 import org.apache.tika.parser.ParseContext
-import org.osiam.resources.converter.GroupConverter
-import org.osiam.resources.exceptions.ResourceExistsException
-import org.osiam.resources.exceptions.ResourceNotFoundException
-import org.osiam.resources.provisioning.update.GroupUpdater
+import org.osiam.resource_server.resources.converter.GroupConverter
+import org.osiam.resource_server.resources.exceptions.ResourceExistsException
+import org.osiam.resource_server.resources.exceptions.ResourceNotFoundException
+import org.osiam.resource_server.resources.provisioning.update.GroupUpdater
 import org.osiam.resources.scim.Group
 import org.osiam.resources.scim.MemberRef
-import org.osiam.storage.dao.GroupDao
-import org.osiam.storage.dao.SearchResult
-import org.osiam.storage.entities.GroupEntity
-import org.osiam.storage.entities.MetaEntity
-import org.osiam.storage.query.QueryFilterParser
+import org.osiam.resource_server.storage.dao.GroupDao
+import org.osiam.resource_server.storage.dao.SearchResult
+import org.osiam.resource_server.storage.entities.GroupEntity
+import org.osiam.resource_server.storage.entities.MetaEntity
+import org.osiam.resource_server.storage.query.QueryFilterParser
 import org.springframework.dao.DataIntegrityViolationException
 
 import spock.lang.Specification

@@ -21,7 +21,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.security.authorization
+package org.osiam.resource_server.security.authorization
 
 import org.springframework.security.access.ConfigAttribute
 import org.springframework.security.access.SecurityConfig

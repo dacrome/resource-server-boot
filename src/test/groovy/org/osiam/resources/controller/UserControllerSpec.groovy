@@ -21,22 +21,22 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.controller
+package org.osiam.resource_server.resources.controller
 
-import org.osiam.resources.helper.AttributesRemovalHelper
-import org.osiam.resources.helper.JsonInputValidator
-import org.osiam.resources.helper.RequestParamHelper
-import org.osiam.resources.provisioning.SCIMUserProvisioning
+import org.osiam.resource_server.resources.helper.AttributesRemovalHelper
+import org.osiam.resource_server.resources.helper.JsonInputValidator
+import org.osiam.resource_server.resources.helper.RequestParamHelper
+import org.osiam.resource_server.resources.provisioning.SCIMUserProvisioning
 import org.osiam.resources.scim.Meta
 import org.osiam.resources.scim.Name
 import org.osiam.resources.scim.SCIMSearchResult
 import org.osiam.resources.scim.User
-import org.osiam.security.authorization.AccessTokenValidationService;
-import org.osiam.security.helper.AccessTokenHelper
-import org.osiam.storage.entities.EmailEntity
-import org.osiam.storage.entities.MetaEntity
-import org.osiam.storage.entities.NameEntity
-import org.osiam.storage.entities.UserEntity
+import org.osiam.resource_server.security.authorization.AccessTokenValidationService;
+import org.osiam.resource_server.security.helper.AccessTokenHelper
+import org.osiam.resource_server.storage.entities.EmailEntity
+import org.osiam.resource_server.storage.entities.MetaEntity
+import org.osiam.resource_server.storage.entities.NameEntity
+import org.osiam.resource_server.storage.entities.UserEntity
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod

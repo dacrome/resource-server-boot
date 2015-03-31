@@ -21,14 +21,14 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.provisioning.update
+package org.osiam.resource_server.resources.provisioning.update
 
-import org.osiam.resources.exceptions.OsiamException
+import org.osiam.resource_server.resources.exceptions.OsiamException
 import org.osiam.resources.scim.Meta
 import org.osiam.resources.scim.Name
 import org.osiam.resources.scim.User
-import org.osiam.storage.entities.NameEntity
-import org.osiam.storage.entities.UserEntity
+import org.osiam.resource_server.storage.entities.NameEntity
+import org.osiam.resource_server.storage.entities.UserEntity
 
 import spock.lang.Specification
 import spock.lang.Unroll

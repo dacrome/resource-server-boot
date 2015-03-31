@@ -21,12 +21,12 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.storage.entities.extension
+package org.osiam.resource_server.storage.entities.extension
 
 import org.hibernate.dialect.function.NoArgSQLFunction
-import org.osiam.resources.exceptions.NoSuchElementException
-import org.osiam.storage.entities.ExtensionEntity
-import org.osiam.storage.entities.ExtensionFieldEntity
+import org.osiam.resource_server.resources.exceptions.NoSuchElementException
+import org.osiam.resource_server.storage.entities.ExtensionEntity
+import org.osiam.resource_server.storage.entities.ExtensionFieldEntity
 
 import spock.lang.Specification
 

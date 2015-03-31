@@ -21,11 +21,11 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.converter
+package org.osiam.resource_server.resources.converter
 
 import org.osiam.resources.scim.MultiValuedAttribute
 import org.osiam.resources.scim.Role
-import org.osiam.storage.entities.RoleEntity
+import org.osiam.resource_server.storage.entities.RoleEntity
 
 import spock.lang.Specification
 

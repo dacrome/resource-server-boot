@@ -21,18 +21,18 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.provisioning.update
+package org.osiam.resource_server.resources.provisioning.update
 
-import org.osiam.resources.converter.ExtensionConverter
-import org.osiam.resources.exceptions.NoSuchElementException
-import org.osiam.resources.exceptions.OsiamException
+import org.osiam.resource_server.resources.converter.ExtensionConverter
+import org.osiam.resource_server.resources.exceptions.NoSuchElementException
+import org.osiam.resource_server.resources.exceptions.OsiamException
 import org.osiam.resources.scim.Extension
 import org.osiam.resources.scim.ExtensionFieldType
-import org.osiam.storage.dao.ExtensionDao
-import org.osiam.storage.entities.ExtensionEntity
-import org.osiam.storage.entities.ExtensionFieldEntity
-import org.osiam.storage.entities.ExtensionFieldValueEntity
-import org.osiam.storage.entities.UserEntity
+import org.osiam.resource_server.storage.dao.ExtensionDao
+import org.osiam.resource_server.storage.entities.ExtensionEntity
+import org.osiam.resource_server.storage.entities.ExtensionFieldEntity
+import org.osiam.resource_server.storage.entities.ExtensionFieldValueEntity
+import org.osiam.resource_server.storage.entities.UserEntity
 
 import spock.lang.Specification
 

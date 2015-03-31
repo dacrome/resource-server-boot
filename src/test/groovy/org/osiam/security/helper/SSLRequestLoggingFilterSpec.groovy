@@ -21,7 +21,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.security.helper
+package org.osiam.resource_server.security.helper
 
 import javax.servlet.FilterChain
 import javax.servlet.FilterConfig

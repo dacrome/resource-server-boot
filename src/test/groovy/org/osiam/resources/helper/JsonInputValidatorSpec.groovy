@@ -21,7 +21,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.helper
+package org.osiam.resource_server.resources.helper
 
 import com.fasterxml.jackson.databind.JsonMappingException
 import org.osiam.resources.scim.Constants

@@ -1,0 +1,30 @@
+# OSIAM resource server configuration
+org.osiam:
+  resource-server.profiling: true
+  # Home URL (needed for self reference)
+  resource-server.home: http://localhost:8080/osiam-resource-server
+  # OSIAM auth server configuration
+  auth-server.home: http://localhost:8080/osiam-auth-server
+
+server:
+    port: 42010
+management:
+    port: 43010
+
+logging.level.: ${LOG_LEVEL:INFO}
+logging.level.org.osiam.resource_server: ${LOG_LEVEL_APP:INFO}
+logging.level.org.hibernate: ${LOG_LEVEL_HIBERNATE:OFF}
+
+spring.jpa:
+  properties.hibernate.hbm2ddl.auto: drop-create
+  show-sql: ${DB_SHOW_SQL:false}
+
+spring.datasource:
+  url: ${DB_URL:jdbc:h2:/tmp/osiam-resource-server.db;DB_CLOSE_DELAY=-1}
+  username: ${DB_USER:sa}
+  password: ${DB_PASSWORD:sa}
+  driverClassName: ${DB_DRIVER_CLASS:org.h2.Driver}
+  validation-query: ${DB_VALIDATION_QUERY:SELECT * FROM INFORMATION_SCHEMA.TABLES}
+
+#liquibase:
+#  change-log: classpath:/db/changelog/db.changelog-master.yaml

@@ -21,16 +21,16 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package org.osiam.resources.provisioning.update
+package org.osiam.resource_server.resources.provisioning.update
 
-import org.osiam.resources.exceptions.ResourceExistsException
+import org.osiam.resource_server.resources.exceptions.ResourceExistsException
 import org.osiam.resources.scim.Group
 import org.osiam.resources.scim.MemberRef
 import org.osiam.resources.scim.Meta
-import org.osiam.storage.dao.GroupDao
-import org.osiam.storage.dao.ResourceDao
-import org.osiam.storage.entities.GroupEntity
-import org.osiam.storage.entities.ResourceEntity
+import org.osiam.resource_server.storage.dao.GroupDao
+import org.osiam.resource_server.storage.dao.ResourceDao
+import org.osiam.resource_server.storage.entities.GroupEntity
+import org.osiam.resource_server.storage.entities.ResourceEntity
 
 import spock.lang.Specification
 import spock.lang.Unroll
